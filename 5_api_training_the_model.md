@@ -17,6 +17,7 @@ $trainer = new Impulse\Recommender\Trainer($model, [
 $trainer->train();
 ```
 
-Note that training time may take very long when your database is really large. It can be optimised by
+Note that training time may take very long when your dataset is really large. It can be optimised
+more or less by
 choosing more accurate "learningRate" and "iterations" parameters.
 

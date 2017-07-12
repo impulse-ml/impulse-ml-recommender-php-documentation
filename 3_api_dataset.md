@@ -5,7 +5,7 @@
 ##### Passing data to Impulse - Recommender system
 
 As each algorithm, not only machine learning algorithm Impulse - Recommender must have knowledge about
-your data. Since the PHP applications use different storage algorithms Impulse - Recommender has no database
+your data. Since the PHP applications use different storage systems Impulse - Recommender has no database
 data fetcher - you might consider pass data directly to Dataset class instance.
 
 Consider the following code:
@@ -26,12 +26,12 @@ by user Anna.
 The example does not have any sense because we might want to have multiple items, categories as ratings - but
 you should have knowledge about how to pass data to recommender system.
 
-In this example i used strings as my items, but ```Impulse\Recommender\Dataset\Model::create``` 
+In this example I used strings as my items, but ```Impulse\Recommender\Dataset\Model::create``` 
 and ```Impulse\Recommender\Dataset\Category::create``` methods can also get an integer instead
 of string. You might consider pass integers to dataset as long as their values correspond to database
-primary key and you will save a lot of memory than using a strings.
+primary keys and you will save a lot of memory than using a strings.
 
-Also, each of those 2 ```create``` methods can get second parameter which has no defined, 
+Also, each of those 2 ```create``` methods can get second parameter which has no defined and 
 required data type. You might
 consider pass to it an array with your database model data for future use if database primary keys is not 
 so much useful.

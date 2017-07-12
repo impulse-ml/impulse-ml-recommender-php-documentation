@@ -15,4 +15,6 @@ $model = new Impulse\Recommender\Model($dataset, [
 ```
 
 "numFeatures" is required parameter. It may strictly correspond to number of categories of database
-models or number of user preferences.
+models or number of defined user preferences. 
+Notice that you don't need define how much every item belongs to
+given category or how much user belongs to given preference. You just need know number of them.

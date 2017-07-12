@@ -93,7 +93,7 @@ However, there are some principles of setting these parameters more accurate in 
 better prediction:
  - if you set small learning rate then you might consider increase number of iterations
  - if you set large learning rate then you might consider decrease number of iterations
- - you might except very low error - in this example a reasonable error would be less than 0.0001
+ - you might expect very low error - in this example a reasonable error would be less than 0.0001
  - setting too high learning rate may cause algorithm miss correct item and category parameters so
  the error in next steps will be i.e. 2.01, -2.0, 1.98, -2.18 - when the best error result 
  would 0 we are missing the the minimum error
@@ -102,6 +102,8 @@ For this particular example i have set:
  - learning rate === 0.01
  - number of iterations === 2000
  - number of features === 2 (since i noticed two types of movies)
+ 
+The key to get well trained model is to choose the right ratio of learning rate and number of iterations.
  
 You might consider try different number of features according to your Application so the dataset also.
 
