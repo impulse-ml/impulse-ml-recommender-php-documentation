@@ -12,6 +12,9 @@ According to our data table from lecture 2_problem_motivation.md consider the fo
 You might end up with following debug messages:
 
 ###### Ex. 1
+
+learningRate = 0.0001, iterations = 1000
+
 ```text
 Starting train with 1000 iterations.
 Error: 45.697008230439
@@ -29,6 +32,9 @@ Error: 45.465147439801
 The learningRate is too low and the iterations are too low - we have untrained model with high error.
 
 ###### Ex. 2
+
+learningRate = 0.1, iterations = 10000
+
 ```text
 Starting train with 10000 iterations.
 Error: 45.479312259084
@@ -56,6 +62,9 @@ Error: NAN
 The learningRate is too high cause after some step we have got numerical computation error.
 
 ###### Ex. 3
+
+learningRate = 0.0001, iterations = 100000
+
 ```text
 Starting train with 100000 iterations.
 Error: 45.536692780576
@@ -78,6 +87,9 @@ Error: 1.2172415736276E-9
 It is quite good error, but you might consider setting number of iterations to higher value.
 
 ###### Ex. 4
+
+learningRate = 0.01, iterations = 100000
+
 ```text
 Starting train with 100000 iterations.
 Error: 45.637422604147
