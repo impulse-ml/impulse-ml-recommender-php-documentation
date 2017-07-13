@@ -1,8 +1,9 @@
 # impulse-recommender-documentation
 
-### Examples of misstrained models
+### Examples of training
 
-According to our data table from lecture 2_problem_motivation.md consider the following learning parameters:
+According to our data table from lecture 2_problem_motivation.md consider the following learning parameters
+for this dataset:
 
  - 1: learningRate = 0.0001, iterations = 1000
  - 2: learningRate = 0.1, iterations = 10000
