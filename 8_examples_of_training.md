@@ -115,7 +115,8 @@ Error: 2.0650899384489E-28
 Error: 2.0650899384489E-28
 ```
 
-After some step we are not minimizing the error so you might consider decrease number of iterations.
+After some step we are not minimizing the error which is very close to 0
+so you might consider decrease number of iterations.
 
 #### Note
 
