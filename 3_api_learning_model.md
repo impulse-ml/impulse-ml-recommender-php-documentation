@@ -1,6 +1,6 @@
 # impulse-ml-recommender-php-documentation
 
-### API - Learning Model
+### 3. API - Learning Model
 
 ##### Learn from dataset
 

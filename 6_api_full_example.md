@@ -1,6 +1,6 @@
 # impulse-ml-recommender-php-documentation
 
-### Full example
+### 6. API - Full example
 
 ```php
 include_once __DIR__ . '/../src/Impulse/Recommender/Dataset.php';

@@ -1,6 +1,6 @@
 # impulse-ml-recommender-php-documentation
 
-### 1. Introduction
+### Impulse - Recommender
 
 ##### About 
 Impulse - Recommender is PHP library which can be used to share

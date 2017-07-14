@@ -1,6 +1,6 @@
 # impulse-ml-recommender-php-documentation
 
-### API - Training the model
+### 4. API - Training the model
 
 ##### Train the model
 

@@ -1,6 +1,6 @@
 # impulse-ml-recommender-php-documentation
 
-### API - Predicting the results
+### 5. API - Predicting the results
 
 ##### Use trained model to predicting values
 

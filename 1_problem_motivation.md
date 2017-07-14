@@ -1,8 +1,8 @@
 # impulse-ml-recommender-php-documentation
 
-### 2. Problem motivation
+### 1. Problem motivation
 
-##### Do i need Impulse - Recommender System? 
+##### Do i need Impulse - Recommender, the Recommender System? 
 If you are a PHP developer who maintains any PHP social application and you
 want to predict the "rating" or "preference" that a user would give to an item
 the Impulse - Recommender is library that you might consider to use!
