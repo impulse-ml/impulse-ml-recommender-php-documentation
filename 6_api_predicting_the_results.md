@@ -1,4 +1,4 @@
-# impulse-recommender-documentation
+# impulse-ml-recommender-php-documentation
 
 ### API - Predicting the results
 
@@ -22,8 +22,8 @@ $model->findRelated('The Dark Knight', [
     'limit' => 1
 ])
 ```
+will finds all items in ordered by similarity array and it will returns:
 
-outputs
 ```text
 array(1) {
   [0]=>
@@ -40,8 +40,6 @@ array(1) {
   }
 }
 ```
-
-which finds all items in ordered by similarity array.
 
 ###### Predict rate for user which has not rated any movie
 ```php

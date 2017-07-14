@@ -1,4 +1,4 @@
-# impulse-recommender-documentation
+# impulse-ml-recommender-php-documentation
 
 ### API - Learning Model
 
@@ -9,7 +9,7 @@ Assuming that we have data stored in ```Impulse\Dataset``` we are ready to creat
 We can done this by using:
 
 ```php
-$model = new Impulse\Recommender\Model($dataset, [
+$model = new Impulse\Recommender\LearningModel($dataset, [
     'numFeatures' => 2
 ]);
 ```

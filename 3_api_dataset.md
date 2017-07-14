@@ -1,4 +1,4 @@
-# impulse-recommender-documentation
+# impulse-ml-recommender-php-documentation
 
 ### API - Dataset
 
