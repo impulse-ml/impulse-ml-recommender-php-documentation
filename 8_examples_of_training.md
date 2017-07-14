@@ -85,7 +85,8 @@ Error: 3.6424386184489E-9
 Error: 1.2172415736276E-9
 ```
 
-It is quite good error, but you might consider setting number of iterations to higher value.
+It is quite good error, but you might consider setting number of iterations to higher value or better - 
+increasing learning rate.
 
 ###### Ex. 4
 

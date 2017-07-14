@@ -46,5 +46,5 @@ array(1) {
 $model->predict("Forrest Gump"); // int(2)
 ```
 
-which can be useful when the user has not rated any movie so he has no computed preferences.
+which can be useful when the user has not rated any movie so user has no computed preferences.
 

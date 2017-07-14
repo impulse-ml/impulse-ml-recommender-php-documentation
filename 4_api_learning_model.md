@@ -4,7 +4,8 @@
 
 ##### Learn from dataset
 
-Assuming that we have data stored in ```Impulse\Dataset``` we are ready to create a Learning Model.
+Assuming that we have data stored in ```Impulse\Recommender\Dataset``` we are ready to create
+a Learning Model.
 
 We can done this by using:
 

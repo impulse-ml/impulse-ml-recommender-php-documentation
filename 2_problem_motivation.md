@@ -94,7 +94,7 @@ better prediction:
  - if you set small learning rate then you might consider increase number of iterations
  - if you set large learning rate then you might consider decrease number of iterations
  - you might expect very low error - in this example a reasonable error would be less than 0.0001
- - setting too high learning rate may cause algorithm get computation error and it the predictions become 
+ - setting too high learning rate may cause algorithm get computation error and the predictions become 
  useless
  
 For this particular example i have set:
