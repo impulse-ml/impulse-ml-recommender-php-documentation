@@ -75,13 +75,13 @@ That's how Collaborative Filtering works.
 
 There is only one parameter for a Learning Model created from a dataset - number of features. Understand 
 it like
-type or real category of the item. It's value can be set equals number of item categories in your 
+type or real category of the item. It's value can be set equals number of item types in your 
 application.
 
 There are two learning parameters: learning rate and number of iterations.
 
 The learning rate is parameter which describes how much gradient descent will perform on
-error function. You might to consider to increase or decrease this parameter because it has strong
+error function. You might to consider to increase or decrease this parameter and it has strong
 correlation with number of iterations.
 
 The number of iterations is parameter which describes how much steps gradient descent minimize function
@@ -94,17 +94,16 @@ better prediction:
  - if you set small learning rate then you might consider increase number of iterations
  - if you set large learning rate then you might consider decrease number of iterations
  - you might expect very low error - in this example a reasonable error would be less than 0.0001
- - setting too high learning rate may cause algorithm miss correct item and category parameters so
- the error in next steps will be i.e. 2.01, -2.0, 1.98, -2.18 - when the best error result 
- would 0 we are missing the the minimum error
+ - setting too high learning rate may cause algorithm get computation error and it the predictions become 
+ useless
  
 For this particular example i have set:
  - learning rate === 0.01
- - number of iterations === 2000
+ - number of iterations === 20000
  - number of features === 2 (since i noticed two types of movies)
  
 The key to get well trained model is to choose the right ratio of learning rate and number of iterations.
  
 You might consider try different number of features according to your Application so the dataset also.
 
-Above example was fully implemented in "examples/1.php".
+Above example was fully implemented in "examples/1_train_and_predict.php".
