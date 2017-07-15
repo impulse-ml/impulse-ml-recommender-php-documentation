@@ -1,36 +1,36 @@
-Starting train with 20000 iterations.
-Error: 45.656298998607
-Error: 0.00088837572273025
-Error: 2.5217323195946E-5
-Error: 8.586116826246E-7
-Error: 4.1769999473736E-8
-Error: 3.1969445733112E-9
-Error: 3.2244796936373E-10
-Error: 3.5836994713945E-11
-Error: 4.0902823920142E-12
-Error: 4.7000428251388E-13
-Error: 5.4097461191428E-14
-Error: 6.2291872540888E-15
-Error: 7.1734842837508E-16
-Error: 8.261136868883E-17
-Error: 9.5137594842429E-18
-Error: 1.0956330650439E-18
-Error: 1.2617638729995E-19
-Error: 1.4530971465143E-20
-Error: 1.6734894976132E-21
-Error: 1.9275050553146E-22
-Training ended with error: 2.2257737878379E-23 after 20000 iterations.
-Prediction for 'Guardians of the Galaxy' for user 'Barbara': -1.2847056751752E-11
-Prediction for 'Guardians of the Galaxy' for user 'Charlie': 5.0000000000025
-Prediction for 'Logan' for user 'Anna': -1.3292922318442E-11
-Prediction for 'Logan' for user 'Dave': 4.0000000000031
+Starting train with 20000 steps.
+Step 0 with error 45.480538085596
+Step 1000 with error 0.14185749105855
+Step 2000 with error 0.00012367547481656
+Step 3000 with error 3.619659641736E-6
+Step 4000 with error 1.2231304078042E-7
+Step 5000 with error 5.7888427762046E-9
+Step 6000 with error 4.3159398580704E-10
+Step 7000 with error 4.2963851024733E-11
+Step 8000 with error 4.7458579962238E-12
+Step 9000 with error 5.3950928017295E-13
+Step 10000 with error 6.1779842297497E-14
+Step 11000 with error 7.0872758334659E-15
+Step 12000 with error 8.1340228680908E-16
+Step 13000 with error 9.3363924793255E-17
+Step 14000 with error 1.0716785358187E-17
+Step 15000 with error 1.2301363738974E-18
+Step 16000 with error 1.4120237226256E-19
+Step 17000 with error 1.6208264249521E-20
+Step 18000 with error 1.8605120483173E-21
+Step 19000 with error 2.1359434707995E-22
+Training ended with error 2.4586853842564E-23 after 20000 steps.
+Prediction for 'Guardians of the Galaxy' for user 'Barbara': 1.3472778448431E-11
+Prediction for 'Guardians of the Galaxy' for user 'Charlie': 4.9999999999974
+Prediction for 'Logan' for user 'Anna': 1.3994139180795E-11
+Prediction for 'Logan' for user 'Dave': 3.9999999999967
 Prediction for 'Logan' for user with has not rated any movie: 2
 Related movies dump:
 array(4) {
   [0]=>
   array(2) {
     ["similarity"]=>
-    float(8.9166451999745E-12)
+    float(1.1086798146209E-11)
     ["model"]=>
     array(2) {
       ["_id"]=>
@@ -42,7 +42,7 @@ array(4) {
   [1]=>
   array(2) {
     ["similarity"]=>
-    float(0.24422436480274)
+    float(0.17881301819823)
     ["model"]=>
     array(2) {
       ["_id"]=>
@@ -54,11 +54,11 @@ array(4) {
   [2]=>
   array(2) {
     ["similarity"]=>
-    float(2.4422436479744)
+    float(0.92344428953759)
     ["model"]=>
     array(2) {
       ["_id"]=>
-      string(7) "The Kid"
+      string(12) "Forrest Gump"
       ["data"]=>
       NULL
     }
@@ -66,11 +66,11 @@ array(4) {
   [3]=>
   array(2) {
     ["similarity"]=>
-    float(2.7761840696392)
+    float(1.7881301818354)
     ["model"]=>
     array(2) {
       ["_id"]=>
-      string(12) "Forrest Gump"
+      string(7) "The Kid"
       ["data"]=>
       NULL
     }
