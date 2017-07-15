@@ -13,7 +13,7 @@ $model->predict('Logan', 'Anna'); // float(9.9920072216264E-14)
 
 which predicts rate for unrated "Logan" for user "Anna" by returning a number.
 
-Results may vary from desired for improperly trained or not trained Learning Model.
+Results may vary from desired because of improperly trained or not trained Learning Model.
 
 
 ###### Find similar items

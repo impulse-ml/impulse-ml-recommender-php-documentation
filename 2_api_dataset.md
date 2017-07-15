@@ -4,7 +4,7 @@
 
 ##### Passing data to Impulse-ML: Recommender Dataset
 
-As each algorithm, not only machine learning algorithm Impulse-ML: Recommender must have knowledge about
+Each algorithm, not only machine learning algorithm Impulse-ML: Recommender, must have knowledge about
 your data. Since the PHP applications use different storage systems Impulse-ML: Recommender has no database
 data fetcher - you might consider pass data directly to Dataset class instance.
 
@@ -24,7 +24,7 @@ It is minimum example to set 1 item (The Dark Knight), 1 category (Anna) and set
 by user Anna.
 
 The example does not have any sense because we might want to have multiple items, categories as ratings - but
-you should have knowledge about how to pass data to recommender system.
+you should have knowledge how to pass data to recommender system.
 
 In this example I used strings as my items, but ```Impulse\Recommender\Dataset\Item::create``` 
 and ```Impulse\Recommender\Dataset\Category::create``` methods can also get an integer instead

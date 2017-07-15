@@ -33,10 +33,10 @@ Consider the following data:
 In this particular example we can notice:
  - we have 5 items - 5 movies
  - we have 4 categories - 4 users
- - we can notice 2 types of items: action move or comedy movie
- - it seems that Anna and Barbara hates the action movies but love the comedy
+ - we can notice 2 types of items: action movie and comedy movie
+ - it seems that Anna and Barbara hate the action movies but love the comedy
  movies
- - it seems that Charlie and Dave loves the action movies but hates the 
+ - it seems that Charlie and Dave love the action movies but hate the 
  comedy movies
  - the table is incomplete because every user has not rated at least one movie
  
