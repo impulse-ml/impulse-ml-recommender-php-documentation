@@ -73,15 +73,21 @@ We might notice:
 
 That's how Collaborative Filtering works.
 
+##### Training and parameters
+
+As each machine learning problem after filling with data in order to get correct prediction the training
+based on the dataset is required.
+
 There is only one parameter for a Learning Model created from a dataset - number of features. Understand 
 it like
 type or real category of the item. It's value can be set equals number of item types in your 
-application.
+application. You don't need to name them, you have to know number of them.
 
-There are two learning parameters: learning rate and number of iterations.
+There are two training parameters: learning rate and number of iterations.
 
-The learning rate is parameter which describes how much gradient descent will perform on
-error function. You might to consider to increase or decrease this parameter and it has strong
+The learning rate is parameter which describes how much gradient descent
+(which minimizes the error) will perform. You might to consider to increase or decrease 
+this parameter and it has strong
 correlation with number of iterations.
 
 The number of iterations is parameter which describes how much steps gradient descent minimize function
