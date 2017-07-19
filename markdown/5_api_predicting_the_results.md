@@ -2,7 +2,7 @@
 
 ### 5. API - Predicting the results
 
-##### Use trained model to predicting values
+#### Use trained model to predicting values
 
 There are 3 prediction ways:
 

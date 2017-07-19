@@ -2,7 +2,7 @@
 
 ### 4. API - Training the model
 
-##### Train the model
+#### Train the model
 
 You can get this done by using:
 

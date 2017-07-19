@@ -2,7 +2,7 @@
 
 ### 3. API - Learning Model
 
-##### Learn from dataset
+#### Learn from dataset
 
 Assuming that we have data stored in ```Impulse\Recommender\Dataset``` we are ready to create
 a Learning Model.

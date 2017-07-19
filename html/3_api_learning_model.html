@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>impulse-ml-recommender-php-documentation</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</a></li>
+    <li class="sidebar-header-3"><a href="#3.-api---learning-model">3. API - Learning Model</a></li>
+    <li class="sidebar-header-4"><a href="#learn-from-dataset">Learn from dataset</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h1 id="impulse-ml-recommender-php-documentation"><a class="header-link" href="#impulse-ml-recommender-php-documentation"></a>impulse-ml-recommender-php-documentation</h1>
+<h3 id="3.-api---learning-model"><a class="header-link" href="#3.-api---learning-model"></a>3. API - Learning Model</h3>
+<h4 id="learn-from-dataset"><a class="header-link" href="#learn-from-dataset"></a>Learn from dataset</h4>
+<p>Assuming that we have data stored in <code>Impulse\Recommender\Dataset</code> we are ready to create
+a Learning Model.</p>
+<p>We can do this by using:</p>
+<pre class="hljs"><code>$model = <span class="hljs-keyword">new</span> Impulse\Recommender\LearningModel($dataset, [
+    <span class="hljs-string">'numFeatures'</span> =&gt; <span class="hljs-number">2</span>
+]);</code></pre><p>&quot;numFeatures&quot; is required parameter. It may strictly correspond to number of categories of database
+items or number of defined user preferences. 
+Notice that you don&#39;t need to define how much every item belongs to
+given category or how much user belongs to given preference. You just need to know number of them.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

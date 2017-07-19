@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>impulse-ml-recommender-php-documentation</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</a></li>
+    <li class="sidebar-header-3"><a href="#6.-api---full-example">6. API - Full example</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h1 id="impulse-ml-recommender-php-documentation"><a class="header-link" href="#impulse-ml-recommender-php-documentation"></a>impulse-ml-recommender-php-documentation</h1>
+<h3 id="6.-api---full-example"><a class="header-link" href="#6.-api---full-example"></a>6. API - Full example</h3>
+<pre class="hljs"><code><span class="hljs-keyword">include_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../src/Impulse/Recommender/Dataset.php'</span>;
+<span class="hljs-keyword">include_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../src/Impulse/Recommender/LearningModel.php'</span>;
+<span class="hljs-keyword">include_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../src/Impulse/Recommender/Trainer.php'</span>;
+
+$dataset = <span class="hljs-keyword">new</span> Impulse\Recommender\Dataset();
+
+$dataset-&gt;addItem(Impulse\Recommender\Dataset\Item::create(<span class="hljs-string">'The Dark Knight'</span>));
+$dataset-&gt;addItem(Impulse\Recommender\Dataset\Item::create(<span class="hljs-string">'Guardians of the Galaxy'</span>));
+$dataset-&gt;addItem(Impulse\Recommender\Dataset\Item::create(<span class="hljs-string">'Logan'</span>));
+$dataset-&gt;addItem(Impulse\Recommender\Dataset\Item::create(<span class="hljs-string">'Forrest Gump'</span>));
+$dataset-&gt;addItem(Impulse\Recommender\Dataset\Item::create(<span class="hljs-string">'The Kid'</span>));
+
+$dataset-&gt;addCategory(Impulse\Recommender\Dataset\Category::create(<span class="hljs-string">'Anna'</span>));
+$dataset-&gt;addCategory(Impulse\Recommender\Dataset\Category::create(<span class="hljs-string">'Barbara'</span>));
+$dataset-&gt;addCategory(Impulse\Recommender\Dataset\Category::create(<span class="hljs-string">'Charlie'</span>));
+$dataset-&gt;addCategory(Impulse\Recommender\Dataset\Category::create(<span class="hljs-string">'Dave'</span>));
+
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Dark Knight'</span>, <span class="hljs-string">'Anna'</span>, <span class="hljs-number">0</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Dark Knight'</span>, <span class="hljs-string">'Barbara'</span>, <span class="hljs-number">0</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Dark Knight'</span>, <span class="hljs-string">'Charlie'</span>, <span class="hljs-number">5</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Dark Knight'</span>, <span class="hljs-string">'Dave'</span>, <span class="hljs-number">5</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Guardians of the Galaxy'</span>, <span class="hljs-string">'Anna'</span>, <span class="hljs-number">0</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Guardians of the Galaxy'</span>, <span class="hljs-string">'Barbara'</span>, <span class="hljs-keyword">NULL</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Guardians of the Galaxy'</span>, <span class="hljs-string">'Charlie'</span>, <span class="hljs-keyword">NULL</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Guardians of the Galaxy'</span>, <span class="hljs-string">'Dave'</span>, <span class="hljs-number">5</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Logan'</span>, <span class="hljs-string">'Anna'</span>, <span class="hljs-keyword">NULL</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Logan'</span>, <span class="hljs-string">'Barbara'</span>, <span class="hljs-number">0</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Logan'</span>, <span class="hljs-string">'Charlie'</span>, <span class="hljs-number">4</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Logan'</span>, <span class="hljs-string">'Dave'</span>, <span class="hljs-keyword">NULL</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Forrest Gump'</span>, <span class="hljs-string">'Anna'</span>, <span class="hljs-number">4</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Forrest Gump'</span>, <span class="hljs-string">'Barbara'</span>, <span class="hljs-number">5</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Forrest Gump'</span>, <span class="hljs-string">'Charlie'</span>, <span class="hljs-number">0</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'Forrest Gump'</span>, <span class="hljs-string">'Dave'</span>, <span class="hljs-number">0</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Kid'</span>, <span class="hljs-string">'Anna'</span>, <span class="hljs-number">5</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Kid'</span>, <span class="hljs-string">'Barbara'</span>, <span class="hljs-number">5</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Kid'</span>, <span class="hljs-string">'Charlie'</span>, <span class="hljs-number">0</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Kid'</span>, <span class="hljs-string">'Dave'</span>, <span class="hljs-number">0</span>));
+
+$model = <span class="hljs-keyword">new</span> Impulse\Recommender\LearningModel($dataset, [
+    <span class="hljs-string">'numFeatures'</span> =&gt; <span class="hljs-number">2</span>
+]);
+
+$trainer = <span class="hljs-keyword">new</span> Impulse\Recommender\Trainer($model, [
+    <span class="hljs-string">'learningRate'</span> =&gt; <span class="hljs-number">0.01</span>,
+    <span class="hljs-string">'iterations'</span> =&gt; <span class="hljs-number">20000</span>,
+    <span class="hljs-string">'verbose'</span> =&gt; <span class="hljs-keyword">TRUE</span>,
+    <span class="hljs-string">'verboseStep'</span> =&gt; <span class="hljs-number">1000</span>
+]);
+
+$trainer-&gt;train();
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Prediction for 'Guardians of the Galaxy' for user 'Barbara': {$model-&gt;predict('Guardians of the Galaxy', 'Barbara')}\n"</span>;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Prediction for 'Guardians of the Galaxy' for user 'Charlie': {$model-&gt;predict('Guardians of the Galaxy', 'Charlie')}\n"</span>;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Prediction for 'Logan' for user 'Anna': {$model-&gt;predict('Logan', 'Anna')}\n"</span>;
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Prediction for 'Logan' for user 'Dave': {$model-&gt;predict('Logan', 'Dave')}\n"</span>;
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Prediction for 'Logan' for user with has not rated any movie: {$model-&gt;predict('Logan')}\n"</span>;
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Related movies dump:\n"</span>;
+
+var_dump($model-&gt;findRelated(<span class="hljs-string">'The Dark Knight'</span>, [
+    <span class="hljs-string">'limit'</span> =&gt; <span class="hljs-number">5</span>
+]));</code></pre><p>Which may produce output:</p>
+<pre class="hljs"><code>Starting train <span class="hljs-keyword">with</span> <span class="hljs-number">20000</span> steps.
+<span class="hljs-keyword">Step</span> <span class="hljs-number">0</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.480538085596</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">1000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">0.14185749105855</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">2000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">0.00012367547481656</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">3000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">3.619659641736E-6</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">4000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.2231304078042E-7</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">5000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">5.7888427762046E-9</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">6000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">4.3159398580704E-10</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">7000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">4.2963851024733E-11</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">8000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">4.7458579962238E-12</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">9000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">5.3950928017295E-13</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">10000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">6.1779842297497E-14</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">11000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">7.0872758334659E-15</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">12000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">8.1340228680908E-16</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">13000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">9.3363924793255E-17</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">14000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.0716785358187E-17</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">15000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.2301363738974E-18</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">16000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.4120237226256E-19</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">17000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.6208264249521E-20</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">18000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.8605120483173E-21</span>
+<span class="hljs-keyword">Step</span> <span class="hljs-number">19000</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.1359434707995E-22</span>
+Training ended <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.4586853842564E-23</span> after <span class="hljs-number">20000</span> steps.
+Prediction <span class="hljs-keyword">for</span> <span class="hljs-comment">'Guardians of the Galaxy' for user 'Barbara': 1.3472778448431E-11</span>
+Prediction <span class="hljs-keyword">for</span> <span class="hljs-comment">'Guardians of the Galaxy' for user 'Charlie': 4.9999999999974</span>
+Prediction <span class="hljs-keyword">for</span> <span class="hljs-comment">'Logan' for user 'Anna': 1.3994139180795E-11</span>
+Prediction <span class="hljs-keyword">for</span> <span class="hljs-comment">'Logan' for user 'Dave': 3.9999999999967</span>
+Prediction <span class="hljs-keyword">for</span> <span class="hljs-comment">'Logan' for user with has not rated any movie: 2</span>
+Related movies dump:
+<span class="hljs-built_in">array</span>(<span class="hljs-number">4</span>) {
+  [<span class="hljs-number">0</span>]=&gt;
+  <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+    [<span class="hljs-string">"similarity"</span>]=&gt;
+    float(<span class="hljs-number">1.1086798146209E-11</span>)
+    [<span class="hljs-string">"model"</span>]=&gt;
+    <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+      [<span class="hljs-string">"_id"</span>]=&gt;
+      <span class="hljs-built_in">string</span>(<span class="hljs-number">23</span>) <span class="hljs-string">"Guardians of the Galaxy"</span>
+      [<span class="hljs-string">"data"</span>]=&gt;
+      <span class="hljs-literal">NULL</span>
+    }
+  }
+  [<span class="hljs-number">1</span>]=&gt;
+  <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+    [<span class="hljs-string">"similarity"</span>]=&gt;
+    float(<span class="hljs-number">0.17881301819823</span>)
+    [<span class="hljs-string">"model"</span>]=&gt;
+    <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+      [<span class="hljs-string">"_id"</span>]=&gt;
+      <span class="hljs-built_in">string</span>(<span class="hljs-number">5</span>) <span class="hljs-string">"Logan"</span>
+      [<span class="hljs-string">"data"</span>]=&gt;
+      <span class="hljs-literal">NULL</span>
+    }
+  }
+  [<span class="hljs-number">2</span>]=&gt;
+  <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+    [<span class="hljs-string">"similarity"</span>]=&gt;
+    float(<span class="hljs-number">0.92344428953759</span>)
+    [<span class="hljs-string">"model"</span>]=&gt;
+    <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+      [<span class="hljs-string">"_id"</span>]=&gt;
+      <span class="hljs-built_in">string</span>(<span class="hljs-number">12</span>) <span class="hljs-string">"Forrest Gump"</span>
+      [<span class="hljs-string">"data"</span>]=&gt;
+      <span class="hljs-literal">NULL</span>
+    }
+  }
+  [<span class="hljs-number">3</span>]=&gt;
+  <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+    [<span class="hljs-string">"similarity"</span>]=&gt;
+    float(<span class="hljs-number">1.7881301818354</span>)
+    [<span class="hljs-string">"model"</span>]=&gt;
+    <span class="hljs-built_in">array</span>(<span class="hljs-number">2</span>) {
+      [<span class="hljs-string">"_id"</span>]=&gt;
+      <span class="hljs-built_in">string</span>(<span class="hljs-number">7</span>) <span class="hljs-string">"The Kid"</span>
+      [<span class="hljs-string">"data"</span>]=&gt;
+      <span class="hljs-literal">NULL</span>
+    }
+  }
+}</code></pre>      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

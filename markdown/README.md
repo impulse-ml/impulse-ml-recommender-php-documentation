@@ -2,14 +2,14 @@
 
 ### Impulse-ML: Recommender, the Recommender Engine
 
-##### About 
+#### About 
 Impulse-ML: Recommender is PHP library which can be used to share
 personalized content for users on your website. It is written in PHP
 and requires no additional dependencies. With OOP API you can achieve good
 prediction results and you can quickly apply recommender system in any PHP
 application, e.g. in Wordpress, Drupal or any other PHP framework based application.
 
-##### Machine Learning
+#### Machine Learning
 Recommender system solves a machine learning problem. Given items (i.e. movies rated by user) 
 are possible to rate by users (i.e. 0 - 5 star rating). With given
 rating data Recommender System can predict movie

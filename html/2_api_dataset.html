@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>impulse-ml-recommender-php-documentation</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</a></li>
+    <li class="sidebar-header-3"><a href="#2.-api---dataset">2. API - Dataset</a></li>
+    <li class="sidebar-header-4"><a href="#passing-data-to-impulse-ml:-recommender-dataset">Passing data to Impulse-ML: Recommender Dataset</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h1 id="impulse-ml-recommender-php-documentation"><a class="header-link" href="#impulse-ml-recommender-php-documentation"></a>impulse-ml-recommender-php-documentation</h1>
+<h3 id="2.-api---dataset"><a class="header-link" href="#2.-api---dataset"></a>2. API - Dataset</h3>
+<h4 id="passing-data-to-impulse-ml:-recommender-dataset"><a class="header-link" href="#passing-data-to-impulse-ml:-recommender-dataset"></a>Passing data to Impulse-ML: Recommender Dataset</h4>
+<p>Each algorithm, not only machine learning algorithm Impulse-ML: Recommender, must have knowledge about
+your data. Since the PHP applications use different storage systems Impulse-ML: Recommender has no database
+data fetcher - you might consider pass data directly to Dataset class instance.</p>
+<p>Consider the following code:</p>
+<pre class="hljs"><code><span class="hljs-keyword">include_once</span> <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/../src/Impulse/Recommender/Dataset.php'</span>;
+
+$dataset = <span class="hljs-keyword">new</span> Impulse\Recommender\Dataset();
+
+$dataset-&gt;addItem(Impulse\Recommender\Dataset\Item::create(<span class="hljs-string">'The Dark Knight'</span>));
+$dataset-&gt;addCategory(Impulse\Recommender\Dataset\Category::create(<span class="hljs-string">'Anna'</span>));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create(<span class="hljs-string">'The Dark Knight'</span>, <span class="hljs-string">'Anna'</span>, <span class="hljs-number">0</span>));</code></pre><p>It is minimum example to set 1 item (The Dark Knight), 1 category (Anna) and set it&#39;s rating to value of 0 
+by user Anna.</p>
+<p>The example does not have any sense because we might want to have multiple items, categories as ratings - but
+you should have knowledge how to pass data to recommender system.</p>
+<p>In this example I used strings as my items, but <code>Impulse\Recommender\Dataset\Item::create</code> 
+and <code>Impulse\Recommender\Dataset\Category::create</code> methods can also get an integer instead
+of string. You might consider pass integers to dataset as long as their values correspond to database
+primary keys and you will save a lot of memory than using a strings.</p>
+<p>Also, each of those 2 <code>create</code> methods can get second parameter which has no defined and no
+required data type. You might
+consider pass to it an array with your database model data for future use if database primary keys is not 
+so much useful.</p>
+<p>The <code>Impulse\Recommender\Dataset\Rating::create</code> requires 3 parameters, which the first 2 - the item and
+the category should be already added to dataset and the third one should be numeric value. 
+There is no minimum or 
+maximum value, but different ranges of all ratings can require a different learning parameters. You might
+consider pass NULL if item is not rated but it is not required.</p>
+<p>For real life example of creating dataset check &quot;examples/1_train_and_predict.php&quot;</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
