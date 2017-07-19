@@ -36,82 +36,21 @@ for this dataset:</p>
 <p>You might end up with following debug messages:</p>
 <h6 id="ex.-1"><a class="header-link" href="#ex.-1"></a>Ex. 1</h6>
 <p>learningRate = 0.0001, iterations = 1000</p>
-<pre class="hljs"><code>Starting train <span class="hljs-keyword">with</span> <span class="hljs-number">1000</span> iterations.
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.697008230439</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.673298261996</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.650756435762</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.62866667389</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.606332556453</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.583054764145</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.558108724663</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.530721752861</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.500048989406</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.465147439801</span></code></pre><p>The learningRate is too low and the iterations are too low - we have untrained model with high error.</p>
+<p class="img-container"><img src="img/training_example_1.png?raw=true" alt="Ex. 1"></p>
+<p>The learningRate is too low and the iterations are too low - we have untrained model with high error.</p>
 <h6 id="ex.-2"><a class="header-link" href="#ex.-2"></a>Ex. 2</h6>
 <p>learningRate = 0.1, iterations = 10000</p>
-<pre class="hljs"><code>Starting train <span class="hljs-keyword">with</span> <span class="hljs-number">10000</span> iterations.
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.479312259084</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> NAN</code></pre><p>The learningRate is too high cause after some step we have got numerical computation error.</p>
+<p class="img-container"><img src="img/training_example_2.png?raw=true" alt="Ex. 2"></p>
+<p>The learningRate is too high cause after some step we have got numerical computation error.</p>
 <h6 id="ex.-3"><a class="header-link" href="#ex.-3"></a>Ex. 3</h6>
 <p>learningRate = 0.0001, iterations = 100000</p>
-<pre class="hljs"><code>Starting train <span class="hljs-keyword">with</span> <span class="hljs-number">100000</span> iterations.
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.536692780576</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">0.0050570121394892</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">0.00076741031487873</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">0.0002433251289907</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">7.7274822087558E-5</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.4833005765218E-5</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">8.0890664013749E-6</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.6621036738157E-6</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">8.8193875299363E-7</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.9334198440834E-7</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">9.7788780298776E-8</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">3.2639511383413E-8</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.0901596138917E-8</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">3.6424386184489E-9</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.2172415736276E-9</span></code></pre><p>It is quite good error, but you might consider setting number of iterations to higher value or better - 
+<p class="img-container"><img src="img/training_example_3.png?raw=true" alt="Ex. 3"></p>
+<p>It is quite good error, but you might consider setting number of iterations to higher value or better - 
 increasing learning rate.</p>
 <h6 id="ex.-4"><a class="header-link" href="#ex.-4"></a>Ex. 4</h6>
 <p>learningRate = 0.01, iterations = 100000</p>
-<pre class="hljs"><code>Starting train <span class="hljs-keyword">with</span> <span class="hljs-number">100000</span> iterations.
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">45.637422604147</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">4.6725552374453E-9</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.4196599398092E-13</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">4.3166977553481E-18</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">1.3129673074054E-22</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">4.678660073156E-27</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span>
-<span class="hljs-keyword">Step</span> X <span class="hljs-keyword">with</span> <span class="hljs-keyword">error</span> <span class="hljs-number">2.0650899384489E-28</span></code></pre><p>After some steps we are not minimizing the error which is very close to 0
+<p class="img-container"><img src="img/training_example_4.png?raw=true" alt="Ex. 4"></p>
+<p>After some steps we are not minimizing the error which is very close to 0
 so you might consider decrease number of iterations.</p>
 <h4 id="note"><a class="header-link" href="#note"></a>Note</h4>
 <p>The following examples with too large number of iterations should not have big impact on the time of

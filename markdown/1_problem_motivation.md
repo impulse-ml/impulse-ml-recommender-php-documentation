@@ -112,4 +112,4 @@ The key to get well trained model is to choose the right ratio of learning rate 
  
 You might consider try different number of features according to your Application so the dataset also.
 
-Above example was fully implemented in "examples/1_train_and_predict.php".
+Above example was fully implemented in [examples/1_train_and_predict.php](../examples/1_train_and_predict.php).

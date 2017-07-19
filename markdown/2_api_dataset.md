@@ -42,5 +42,5 @@ There is no minimum or
 maximum value, but different ranges of all ratings can require a different learning parameters. You might
 consider pass NULL if item is not rated but it is not required.
 
-For real life example of creating dataset check "examples/1_train_and_predict.php"
+For real life example of creating dataset check [examples/1_train_and_predict.php](../examples/1_train_and_predict.php)
 
