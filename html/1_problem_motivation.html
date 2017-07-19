@@ -16,14 +16,14 @@
       <div class="span3"><ul class="nav nav-list">
     <li class="sidebar-header-1"><a href="#impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</a></li>
     <li class="sidebar-header-3"><a href="#1.-problem-motivation">1. Problem motivation</a></li>
-    <li class="sidebar-header-4"><a href="#do-i-need-impulse-ml:-recommender,-the-recommender-system?">Do i need Impulse-ML: Recommender, the Recommender System?</a></li>
+    <li class="sidebar-header-4"><a href="#do-i-need-impulse-ml:-recommender,-the-recommender-system?">Do I need Impulse-ML: Recommender, the Recommender System?</a></li>
     <li class="sidebar-header-4"><a href="#problem-definition">Problem definition</a></li>
     <li class="sidebar-header-4"><a href="#training-and-parameters">Training and parameters</a></li>
 </ul>
       </div>
       <div class="span9 main"><h1 id="impulse-ml-recommender-php-documentation"><a class="header-link" href="#impulse-ml-recommender-php-documentation"></a>impulse-ml-recommender-php-documentation</h1>
 <h3 id="1.-problem-motivation"><a class="header-link" href="#1.-problem-motivation"></a>1. Problem motivation</h3>
-<h4 id="do-i-need-impulse-ml:-recommender,-the-recommender-system?"><a class="header-link" href="#do-i-need-impulse-ml:-recommender,-the-recommender-system?"></a>Do i need Impulse-ML: Recommender, the Recommender System?</h4>
+<h4 id="do-i-need-impulse-ml:-recommender,-the-recommender-system?"><a class="header-link" href="#do-i-need-impulse-ml:-recommender,-the-recommender-system?"></a>Do I need Impulse-ML: Recommender, the Recommender System?</h4>
 <p>If you are a PHP developer who maintains any PHP social application and you
 want to predict the &quot;rating&quot; or &quot;preference&quot; that a user would give to an item
 the Impulse-ML: Recommender is library that you might consider to use!
@@ -86,20 +86,28 @@ the movie which he would like but he does not rated that movie yet</li>
 <p>That&#39;s how Collaborative Filtering works.</p>
 <h4 id="training-and-parameters"><a class="header-link" href="#training-and-parameters"></a>Training and parameters</h4>
 <p>As each machine learning problem after filling with data in order to get correct prediction the training
-based on the dataset is required.</p>
-<p>There is only one parameter for a Learning Model created from a dataset - number of features. Understand 
+(based on the dataset) is required.</p>
+<p>There is only one parameter for a Learning Model created from a dataset:</p>
+<ul class="list">
+<li>number of features.</li>
+</ul>
+<p>Understand 
 it like
 type or real category of the item. It&#39;s value can be set equals number of item types in your 
 application. You don&#39;t need to name them, you have to know number of them.</p>
-<p>There are two training parameters: learning rate and number of iterations.</p>
-<p>The learning rate is parameter which describes how much gradient descent
+<p>There are two training parameters:</p>
+<ul class="list">
+<li>learning rate </li>
+<li>number of iterations</li>
+</ul>
+<p>The <strong>learning</strong> <strong>rate</strong> is parameter which describes how much gradient descent
 (which minimizes the error) will perform. You might to consider to increase or decrease 
 this parameter and it has strong
 correlation with number of iterations.</p>
-<p>The number of iterations is parameter which describes how much steps gradient descent minimize function
+<p>The <strong>number</strong> <strong>of</strong> <strong>iterations</strong> is parameter which describes how much steps gradient descent minimize function
 will be applied. It&#39;s highly correlated with learning rate.</p>
 <p>The results of prediction may vary from desired by setting this parameters less accurate.</p>
-<p>However, there are some principles of setting these parameters more accurate in order to get
+<p>However, there are some rules of setting these parameters more accurate in order to get
 better prediction:</p>
 <ul class="list">
 <li>if you set small learning rate then you might consider increase number of iterations</li>
@@ -112,7 +120,7 @@ useless</li>
 <ul class="list">
 <li>learning rate === 0.01</li>
 <li>number of iterations === 20000</li>
-<li>number of features === 2 (since i noticed two types of movies)</li>
+<li>number of features === 2 (since i noticed two types of movies or two user preferences)</li>
 </ul>
 <p>The key to get well trained model is to choose the right ratio of learning rate and number of iterations.</p>
 <p>You might consider try different number of features according to your Application so the dataset also.</p>

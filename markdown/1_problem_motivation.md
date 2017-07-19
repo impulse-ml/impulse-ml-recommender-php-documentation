@@ -2,7 +2,7 @@
 
 ### 1. Problem motivation
 
-#### Do i need Impulse-ML: Recommender, the Recommender System? 
+#### Do I need Impulse-ML: Recommender, the Recommender System? 
 If you are a PHP developer who maintains any PHP social application and you
 want to predict the "rating" or "preference" that a user would give to an item
 the Impulse-ML: Recommender is library that you might consider to use!
@@ -76,26 +76,31 @@ That's how Collaborative Filtering works.
 #### Training and parameters
 
 As each machine learning problem after filling with data in order to get correct prediction the training
-based on the dataset is required.
+(based on the dataset) is required.
 
-There is only one parameter for a Learning Model created from a dataset - number of features. Understand 
+There is only one parameter for a Learning Model created from a dataset:
+- number of features.
+
+Understand 
 it like
 type or real category of the item. It's value can be set equals number of item types in your 
 application. You don't need to name them, you have to know number of them.
 
-There are two training parameters: learning rate and number of iterations.
+There are two training parameters:
+- learning rate 
+- number of iterations
 
-The learning rate is parameter which describes how much gradient descent
+The **learning** **rate** is parameter which describes how much gradient descent
 (which minimizes the error) will perform. You might to consider to increase or decrease 
 this parameter and it has strong
 correlation with number of iterations.
 
-The number of iterations is parameter which describes how much steps gradient descent minimize function
+The **number** **of** **iterations** is parameter which describes how much steps gradient descent minimize function
 will be applied. It's highly correlated with learning rate.
 
 The results of prediction may vary from desired by setting this parameters less accurate.
 
-However, there are some principles of setting these parameters more accurate in order to get
+However, there are some rules of setting these parameters more accurate in order to get
 better prediction:
  - if you set small learning rate then you might consider increase number of iterations
  - if you set large learning rate then you might consider decrease number of iterations
@@ -106,7 +111,7 @@ better prediction:
 For this particular example i have set:
  - learning rate === 0.01
  - number of iterations === 20000
- - number of features === 2 (since i noticed two types of movies)
+ - number of features === 2 (since i noticed two types of movies or two user preferences)
  
 The key to get well trained model is to choose the right ratio of learning rate and number of iterations.
  
