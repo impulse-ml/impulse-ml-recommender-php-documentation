@@ -12,7 +12,7 @@ for this dataset:
  
 You might end up with following debug messages:
 
-##### Ex. 1
+#### Ex. 1
 
 learningRate = 0.0001, iterations = 1000
 
@@ -21,7 +21,7 @@ learningRate = 0.0001, iterations = 1000
 
 The learningRate is too low and the iterations are too low - we have untrained model with high error.
 
-##### Ex. 2
+#### Ex. 2
 
 learningRate = 0.1, iterations = 10000
 
@@ -29,7 +29,7 @@ learningRate = 0.1, iterations = 10000
 
 The learningRate is too high cause after some step we have got numerical computation error.
 
-##### Ex. 3
+#### Ex. 3
 
 learningRate = 0.0001, iterations = 100000
 
@@ -38,7 +38,7 @@ learningRate = 0.0001, iterations = 100000
 It is quite good error, but you might consider setting number of iterations to higher value or
 increasing learning rate.
 
-##### Ex. 4
+#### Ex. 4
 
 learningRate = 0.01, iterations = 100000
 
@@ -47,7 +47,7 @@ learningRate = 0.01, iterations = 100000
 After some steps we are not minimizing the error which is very close to 0
 so you might consider decrease number of iterations.
 
-#### Note
+### Note
 
 The following examples with too large number of iterations should not have big impact on the time of
 training the model according to our small dataset used in previous examples.

@@ -73,7 +73,7 @@ We might notice:
 
 That's how Collaborative Filtering works.
 
-#### Training and parameters
+#### Training and training parameters
 
 As each machine learning problem after filling with data in order to get correct prediction the training
 (based on the dataset) is required.

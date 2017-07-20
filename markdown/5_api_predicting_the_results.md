@@ -2,11 +2,9 @@
 
 ### 5. API - Predicting the results
 
-#### Use trained model to predicting values
-
 There are 3 prediction ways:
 
-#### Predict rate
+#### Predict rating for user
 ```php
 $model->predict('Logan', 'Anna'); // float(9.9920072216264E-14)
 ```
