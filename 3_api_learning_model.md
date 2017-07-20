@@ -1,8 +1,6 @@
-# impulse-ml-recommender-php-documentation
+# 3. API - Learning Model
 
-### 3. API - Learning Model
-
-#### Learning from dataset
+### Learning from dataset
 
 Assuming that we have data stored in ```Impulse\Recommender\Dataset``` we are ready to create
 a Learning Model.

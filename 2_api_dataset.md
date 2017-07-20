@@ -1,8 +1,6 @@
-# impulse-ml-recommender-php-documentation
+# 2. API - Dataset
 
-### 2. API - Dataset
-
-#### Passing data to Impulse-ML: Recommender Dataset
+### Passing data to Impulse-ML: Recommender Dataset
 
 Each algorithm, not only machine learning algorithm Impulse-ML: Recommender, must have knowledge about
 your data. Since the PHP applications use different storage systems Impulse-ML: Recommender has no database

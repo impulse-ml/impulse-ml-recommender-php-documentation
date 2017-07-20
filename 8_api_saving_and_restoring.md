@@ -1,13 +1,11 @@
-# impulse-ml-recommender-php-documentation
-
-### 8. API - Saving and restoring the Learning Model
+# 8. API - Saving and restoring the Learning Model
 
 You probably don't want to train your model after each one rate given by user, but for sure you might want
 to do that job outside your website because the training time could take very large amount of time.
 
 For do this we have implemented saving and restoring your trained Learning Model.
 
-#### Save
+### Save
 
 ```php
 include_once __DIR__ . '/../src/Impulse/Recommender/Builder.php';
@@ -16,7 +14,7 @@ $builder = new Impulse\Recommender\Builder($model);
 $builder->save(__DIR__, 'save1');
 ```
 
-#### Restore
+### Restore
 
 ```php
 include_once __DIR__ . '/../src/Impulse/Recommender/Builder.php';

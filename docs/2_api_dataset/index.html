@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>API: Dataset - Impulse-ML: Recommender, the recommender engine</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "API: Dataset";
+    var mkdocs_page_input_path = "2_api_dataset.md";
+    var mkdocs_page_url = "/2_api_dataset/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Impulse-ML: Recommender, the recommender engine</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../1_problem_motivation/">Problem motivation</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">API: Dataset</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#2-api-dataset">2. API - Dataset</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../3_api_learning_model/">API: Learning Model</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../4_api_training_the_model/">API: Training the model</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../5_api_predicting_the_results/">API: Predicting the results</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../6_api_full_example/">API: Full example</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../7_examples_of_training/">Examples of training</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../8_api_saving_and_restoring/">API: Saving and restoring</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Impulse-ML: Recommender, the recommender engine</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>API: Dataset</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</h1>
+<h3 id="2-api-dataset">2. API - Dataset</h3>
+<h4 id="passing-data-to-impulse-ml-recommender-dataset">Passing data to Impulse-ML: Recommender Dataset</h4>
+<p>Each algorithm, not only machine learning algorithm Impulse-ML: Recommender, must have knowledge about
+your data. Since the PHP applications use different storage systems Impulse-ML: Recommender has no database
+data fetcher - you might consider pass data directly to Dataset class instance.</p>
+<p>Consider the following code:</p>
+<pre><code class="php">include_once __DIR__ . '/../src/Impulse/Recommender/Dataset.php';
+
+$dataset = new Impulse\Recommender\Dataset();
+
+$dataset-&gt;addItem(Impulse\Recommender\Dataset\Item::create('The Dark Knight'));
+$dataset-&gt;addCategory(Impulse\Recommender\Dataset\Category::create('Anna'));
+$dataset-&gt;addRating(Impulse\Recommender\Dataset\Rating::create('The Dark Knight', 'Anna', 0));
+</code></pre>
+
+<p>It is minimum example to set 1 item (The Dark Knight), 1 category (Anna) and set it's rating to value of 0 
+by user Anna.</p>
+<p>The example does not have any sense because we might want to have multiple items, categories as ratings - but
+you should have knowledge how to pass data to recommender system.</p>
+<p>In this example I used strings as my items, but <code>Impulse\Recommender\Dataset\Item::create</code> 
+and <code>Impulse\Recommender\Dataset\Category::create</code> methods can also get an integer instead
+of string. You might consider pass integers to dataset as long as their values correspond to database
+primary keys and you will save a lot of memory than using a strings.</p>
+<p>Also, each of those 2 <code>create</code> methods can get second parameter which has no defined and no
+required data type. You might
+consider pass to it an array with your database model data for future use if database primary keys is not 
+so much useful.</p>
+<p>The <code>Impulse\Recommender\Dataset\Rating::create</code> requires 3 parameters, which the first 2 - the item and
+the category should be already added to dataset and the third one should be numeric value. 
+There is no minimum or 
+maximum value, but different ranges of all ratings can require a different learning parameters. You might
+consider pass NULL if item is not rated but it is not required.</p>
+<p>For real life example of creating dataset check <a href="../../examples/1_train_and_predict.php">examples/1_train_and_predict.php</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../3_api_learning_model/" class="btn btn-neutral float-right" title="API: Learning Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1_problem_motivation/" class="btn btn-neutral" title="Problem motivation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1_problem_motivation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../3_api_learning_model/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

@@ -1,10 +1,8 @@
-# impulse-ml-recommender-php-documentation
-
-### 5. API - Predicting the results
+# 5. API - Predicting the results
 
 There are 3 prediction ways:
 
-#### Predict rating for user
+### Predict rating for user
 ```php
 $model->predict('Logan', 'Anna'); // float(9.9920072216264E-14)
 ```
@@ -14,7 +12,7 @@ which predicts rate for unrated "Logan" for user "Anna" by returning a number.
 Results may vary from desired because of improperly trained or not trained Learning Model.
 
 
-#### Find similar items
+### Find similar items
 ```php
 $model->findRelated('The Dark Knight', [
     'limit' => 1
@@ -39,7 +37,7 @@ array(1) {
 }
 ```
 
-#### Predict rate for user which has not rated any movie
+### Predict rate for user which has not rated any movie
 ```php
 $model->predict("Forrest Gump"); // int(2)
 ```

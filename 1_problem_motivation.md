@@ -1,8 +1,6 @@
-# impulse-ml-recommender-php-documentation
+# 1. Problem motivation
 
-### 1. Problem motivation
-
-#### Do I need Impulse-ML: Recommender, the Recommender System? 
+### Do I need Impulse-ML: Recommender, the Recommender System? 
 If you are a PHP developer who maintains any PHP social application and you
 want to predict the "rating" or "preference" that a user would give to an item
 the Impulse-ML: Recommender is library that you might consider to use!
@@ -10,7 +8,7 @@ In further readings I will show you how to use Impulse-ML: Recommender
 and give you a hint on how to choose parameters which makes the predictions
 more accurate.
 
-#### Problem definition
+### Problem definition
 
 Consider the following data:
 
@@ -73,7 +71,7 @@ We might notice:
 
 That's how Collaborative Filtering works.
 
-#### Training and training parameters
+### Training and training parameters
 
 As each machine learning problem after filling with data in order to get correct prediction the training
 (based on the dataset) is required.

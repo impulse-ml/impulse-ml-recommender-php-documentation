@@ -1,8 +1,6 @@
-# impulse-ml-recommender-php-documentation
+# 4. API - Training the model
 
-### 4. API - Training the model
-
-#### Training the model
+### Training the model
 
 You can get this done by using:
 
