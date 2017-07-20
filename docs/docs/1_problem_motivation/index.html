@@ -14,9 +14,6 @@
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
-  <link href="../docs/css/highlight.css" rel="stylesheet">
-  <link href="../docs/css/theme.css" rel="stylesheet">
-  <link href="../docs/css/theme_extra.css" rel="stylesheet">
   
   <script>
     // Current page data
@@ -60,15 +57,11 @@
     <a class="current" href="./">Problem motivation</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#1-problem-motivation">1. Problem motivation</a></li>
+    <li class="toctree-l2"><a href="#impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#do-i-need-impulse-ml-recommender-the-recommender-system">Do I need Impulse-ML: Recommender, the Recommender System?</a></li>
-        
-            <li><a class="toctree-l3" href="#problem-definition">Problem definition</a></li>
-        
-            <li><a class="toctree-l3" href="#training-and-training-parameters">Training and training parameters</a></li>
+            <li><a class="toctree-l3" href="#1-problem-motivation">1. Problem motivation</a></li>
         
         </ul>
     
@@ -143,15 +136,16 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="1-problem-motivation">1. Problem motivation</h1>
-<h3 id="do-i-need-impulse-ml-recommender-the-recommender-system">Do I need Impulse-ML: Recommender, the Recommender System?</h3>
+                <h1 id="impulse-ml-recommender-php-documentation">impulse-ml-recommender-php-documentation</h1>
+<h3 id="1-problem-motivation">1. Problem motivation</h3>
+<h4 id="do-i-need-impulse-ml-recommender-the-recommender-system">Do I need Impulse-ML: Recommender, the Recommender System?</h4>
 <p>If you are a PHP developer who maintains any PHP social application and you
 want to predict the "rating" or "preference" that a user would give to an item
 the Impulse-ML: Recommender is library that you might consider to use!
 In further readings I will show you how to use Impulse-ML: Recommender
 and give you a hint on how to choose parameters which makes the predictions
 more accurate.</p>
-<h3 id="problem-definition">Problem definition</h3>
+<h4 id="problem-definition">Problem definition</h4>
 <p>Consider the following data:</p>
 <pre><code>+---------------------------------+------+---------+---------+---------+
 | Movie \ User                    | Anna | Barbara | Charlie | Dave    |
@@ -168,21 +162,20 @@ more accurate.</p>
 +---------------------------------+------+---------+---------+---------+
 </code></pre>
 
-<p>In this particular example we can notice:</p>
-<ul>
-<li>we have 5 items - 5 movies</li>
-<li>we have 4 categories - 4 users</li>
-<li>we can notice 2 types of items: action movie and comedy movie</li>
-<li>it seems that Anna and Barbara hate the action movies but love the comedy movies</li>
-<li>it seems that Charlie and Dave love the action movies but hate the comedy movies</li>
-<li>the table is incomplete because every user has not rated at least one movie</li>
-</ul>
-<p>Using this data you might want to:</p>
-<ul>
-<li>predict user rating of movie that is unrated by user i.e. to send user the movie which he would like but he does not rated that movie yet</li>
-<li>get movies similar to given movie</li>
-<li>get the prediction of the movie for user that has no rated any movie and use this data</li>
-</ul>
+<p>In this particular example we can notice:
+ - we have 5 items - 5 movies
+ - we have 4 categories - 4 users
+ - we can notice 2 types of items: action movie and comedy movie
+ - it seems that Anna and Barbara hate the action movies but love the comedy
+ movies
+ - it seems that Charlie and Dave love the action movies but hate the 
+ comedy movies
+ - the table is incomplete because every user has not rated at least one movie</p>
+<p>Using this data you might want to:
+ - predict user rating of movie that is unrated by user i.e. to send user
+ the movie which he would like but he does not rated that movie yet
+ - get movies similar to given movie
+ - get the prediction of the movie for user that has no rated any movie and use this data</p>
 <p>Using Impulse-ML: Recommender you might end up with such predictions:</p>
 <pre><code>+---------------------------------+------+---------+---------+---------+
 | Movie \ User                    | Anna | Barbara | Charlie | Dave    |
@@ -199,30 +192,25 @@ more accurate.</p>
 +---------------------------------+------+---------+---------+---------+
 </code></pre>
 
-<p>We might notice:</p>
-<ul>
-<li>Anna hates action movies so the prediction of "Logan" will be 0</li>
-<li>Barbara also hates action movies so the prediction of "Guardians of the Galaxy" will be 0</li>
-<li>Charlie loves the action movies so the prediction of "Guardians of the Galaxy" will be 5</li>
-<li>Dave also loves the action movies so prediction of "Logan" will be 4 (not 5 since the maximum rating of this movie is equal 4)</li>
-</ul>
+<p>We might notice:
+ - Anna hates action movies so the prediction of "Logan" will be 0
+ - Barbara also hates action movies so the prediction of "Guardians of the Galaxy" will be 0
+ - Charlie loves the action movies so the prediction of "Guardians of the Galaxy" will be 5
+ - Dave also loves the action movies so prediction of "Logan" will be 4 
+ (not 5 since the maximum rating of this movie is equal 4)</p>
 <p>That's how Collaborative Filtering works.</p>
-<h3 id="training-and-training-parameters">Training and training parameters</h3>
+<h4 id="training-and-training-parameters">Training and training parameters</h4>
 <p>As each machine learning problem after filling with data in order to get correct prediction the training
 (based on the dataset) is required.</p>
-<p>There is only one parameter for a Learning Model created from a dataset:</p>
-<ul>
-<li>number of features.</li>
-</ul>
+<p>There is only one parameter for a Learning Model created from a dataset:
+- number of features.</p>
 <p>Understand 
 it like
 type or real category of the item. It's value can be set equals number of item types in your 
 application. You don't need to name them, you have to know number of them.</p>
-<p>There are two training parameters:</p>
-<ul>
-<li>learning rate</li>
-<li>number of iterations</li>
-</ul>
+<p>There are two training parameters:
+- learning rate 
+- number of iterations</p>
 <p>The <strong>learning</strong> <strong>rate</strong> is parameter which describes how much gradient descent
 (which minimizes the error) will perform. You might to consider to increase or decrease 
 this parameter and it has strong
@@ -231,23 +219,19 @@ correlation with number of iterations.</p>
 will be applied. It's highly correlated with learning rate.</p>
 <p>The results of prediction may vary from desired by setting this parameters less accurate.</p>
 <p>However, there are some rules of setting these parameters more accurate in order to get
-better prediction:</p>
-<ul>
-<li>if you set small learning rate then you might consider increase number of iterations</li>
-<li>if you set large learning rate then you might consider decrease number of iterations</li>
-<li>you might expect very low error - in this example a reasonable error would be less than 0.0001</li>
-<li>setting too high learning rate may cause algorithm get computation error and the predictions become 
- useless</li>
-</ul>
-<p>For this particular example i have set:</p>
-<ul>
-<li>learning rate === 0.01</li>
-<li>number of iterations === 20000</li>
-<li>number of features === 2 (since i noticed two types of movies or two user preferences)</li>
-</ul>
+better prediction:
+ - if you set small learning rate then you might consider increase number of iterations
+ - if you set large learning rate then you might consider decrease number of iterations
+ - you might expect very low error - in this example a reasonable error would be less than 0.0001
+ - setting too high learning rate may cause algorithm get computation error and the predictions become 
+ useless</p>
+<p>For this particular example i have set:
+ - learning rate === 0.01
+ - number of iterations === 20000
+ - number of features === 2 (since i noticed two types of movies or two user preferences)</p>
 <p>The key to get well trained model is to choose the right ratio of learning rate and number of iterations.</p>
 <p>You might consider try different number of features according to your Application so the dataset also.</p>
-<p>Above example was fully implemented in <a href="../examples/1_train_and_predict.php">examples/1_train_and_predict.php</a>.</p>
+<p>Above example was fully implemented in <a href="../../examples/1_train_and_predict.php">examples/1_train_and_predict.php</a>.</p>
               
             </div>
           </div>
@@ -292,15 +276,6 @@ better prediction:</p>
     </span>
 </div>
     <script src="../js/theme.js"></script>
-      <script src="../docs/js/highlight.pack.js"></script>
-      <script src="../docs/js/jquery-2.1.1.min.js"></script>
-      <script src="../docs/js/modernizr-2.8.3.min.js"></script>
-      <script src="../docs/js/theme.js"></script>
-      <script src="../docs/mkdocs/js/lunr.min.js"></script>
-      <script src="../docs/mkdocs/js/mustache.min.js"></script>
-      <script src="../docs/mkdocs/js/require.js"></script>
-      <script src="../docs/mkdocs/js/search.js"></script>
-      <script src="../docs/mkdocs/js/text.js"></script>
 
 </body>
 </html>
