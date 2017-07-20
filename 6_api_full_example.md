@@ -1,4 +1,4 @@
-# 6. API - Full example
+# API - Full example
 
 ```php
 include_once __DIR__ . '/../src/Impulse/Recommender/Dataset.php';

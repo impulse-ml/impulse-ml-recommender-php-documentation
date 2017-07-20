@@ -1,4 +1,4 @@
-# 1. Problem motivation
+# Problem motivation
 
 ### Do I need Impulse-ML: Recommender, the Recommender System? 
 If you are a PHP developer who maintains any PHP social application and you

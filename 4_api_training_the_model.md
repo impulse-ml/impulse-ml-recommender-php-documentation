@@ -1,4 +1,4 @@
-# 4. API - Training the model
+# API - Training the model
 
 ### Training the model
 

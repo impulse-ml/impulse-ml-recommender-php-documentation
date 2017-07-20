@@ -1,4 +1,4 @@
-# 8. API - Saving and restoring trained model
+# API - Saving and restoring trained model
 
 You probably don't want to train your model after each one rate given by user, but for sure you might want
 to do that job outside your website because the training time could take very large amount of time.

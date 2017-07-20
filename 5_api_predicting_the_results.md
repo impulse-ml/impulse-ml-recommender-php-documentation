@@ -1,4 +1,4 @@
-# 5. API - Predicting the results
+# API - Predicting the results
 
 There are 3 prediction ways:
 

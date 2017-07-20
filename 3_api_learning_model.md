@@ -1,4 +1,4 @@
-# 3. API - Learning Model
+# API - Learning Model
 
 ### Learning from dataset
 

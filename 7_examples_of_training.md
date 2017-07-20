@@ -1,4 +1,4 @@
-# 7. Examples of training
+# Examples of training
 
 According to our data table from lecture 2_problem_motivation.md consider the following learning parameters
 for this dataset:
