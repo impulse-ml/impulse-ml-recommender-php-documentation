@@ -27,5 +27,5 @@ $model = Impulse\Recommender\Builder::load(__DIR__, 'save1');
 Each of those methods takes 2 parameters which the first one is location of the directory to save the data,
 and the second one is name of created directory for the data files.
 
-Check [examples/2_save.php](../examples/2_save.php) and 
-[examples/3_load_and_predict.php](../examples/3_load_and_predict.php) for example of implementation.
+Check [examples/2_save.php](examples/2_save.php) and 
+[examples/3_load_and_predict.php](examples/3_load_and_predict.php) for example of implementation.

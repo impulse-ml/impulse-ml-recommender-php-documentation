@@ -151,4 +151,4 @@ array(4) {
 }
 ```
 
-Check [examples/1_train_and_predict.php](../examples/1_train_and_predict.php) for details.
+Check [examples/1_train_and_predict.php](examples/1_train_and_predict.php) for details.
